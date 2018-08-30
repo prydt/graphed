@@ -1,0 +1,18 @@
+version: 1.0
+shards:
+  awesome-logger:
+    github: tbrand/awesome-logger
+    commit: 41a2a3d8e4682b5ae3f684ebcadca573e25446a5
+
+  myhtml:
+    github: kostya/myhtml
+    version: 1.0.0
+
+  radix:
+    github: luislavena/radix
+    version: 0.3.8
+
+  router:
+    github: tbrand/router.cr
+    version: 0.2.3
+
