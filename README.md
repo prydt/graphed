@@ -1,17 +1,7 @@
 # graphed
 > A Simple HAC Scraper / Backend
 
-## Installation
-
-TODO: Write installation instructions here
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
+This is going to be used for the backend of a web service called Graphed!
 
 ## Contributing
 
@@ -23,4 +13,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [prydt](https://github.com/prydt) prydt - creator, maintainer
+- [prydt](https://github.com/prydt) - creator, maintainer
