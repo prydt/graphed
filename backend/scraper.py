@@ -1,7 +1,7 @@
 import requests # for a good HTTP client
 from bs4 import BeautifulSoup # for parsing soup
 
-import pprint
+import json
 
 URL = 'https://hac.friscoisd.org/HomeAccess'
 
@@ -68,4 +68,4 @@ def getData(username, password):
         # adding class to collection of classes
         data['classes'].append(obj)
 
-    pprint.pprint(data)
+    return json.dumps(data)
