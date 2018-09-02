@@ -1,5 +1,8 @@
 # graphed
-> A Simple HAC Scraper / Backend
+
+> A Simple HAC Scraper and Frontend
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-vue.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/reading-6th-grade-level.svg)](https://forthebadge.com)
 
 This is going to be used for the backend of a web service called Graphed!
 
