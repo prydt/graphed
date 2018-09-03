@@ -2,24 +2,38 @@ import requests # for a good HTTP client
 from bs4 import BeautifulSoup # for parsing soup
 
 import json
+import pprint
+import os
 
 URL = 'https://hac.friscoisd.org/HomeAccess'
 
-def getData(username, password):
-
-    data = { 'classes': [] }
-
+def getDataWithLogin(username, password):
     s = requests.Session()
 
     # log in
-    s.post(URL + '/Account/LogOn', data = {
+    res = s.post(URL + '/Account/LogOn', data = {
         'Database': '10',
         'LogOnDetails.UserName': username,
         'LogOnDetails.Password': password
     })
 
+    return getData(s)
+
+def getDataWithToken(session_id, auth_cookie):
+    return getData(requests.Session(), session_id, auth_cookie)
+
+def getData(session, session_id=None, auth_cookie=None):
+
+    data = { 'classes': [] }
+
     # get grades page
-    res = s.get(URL + '/Content/Student/Assignments.aspx')
+    if session_id is None or auth_cookie is None:
+        res = session.get(URL + '/Content/Student/Assignments.aspx')
+    else:
+        res = session.get(URL + '/Content/Student/Assignments.aspx', cookies={
+            '.AuthCookie': auth_cookie,
+            'ASP.NET_SessionId': session_id
+        })
 
     # for parsing html
     soup = BeautifulSoup(res.text, 'html.parser')
@@ -69,3 +83,7 @@ def getData(username, password):
         data['classes'].append(obj)
 
     return json.dumps(data)
+
+
+if __name__ == '__main__':
+    getData(os.environ['HUSERNAME'], os.environ['HPASSWORD'])
