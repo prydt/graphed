@@ -14,7 +14,7 @@ Graphed is a website and (PWA) app that makes checking HAC easier and allows you
 
 ### Will my grades be secure?
 
-Absolutely, none of your grades will be accessed unethically and we made this project open source to make sure that you understand that your grades are safe.
+Absolutely, having ethics show in our code is one of our highest concerns and we will only access and/or store information when you consent to it.
 
 ### How do I install the app?
 
@@ -42,3 +42,4 @@ Android:
 ## Contributors
 
 - [prydt](https://github.com/prydt) - creator, maintainer
+- [wbne](https://github.com/wbne) - *official McSpicy boi:tm:*

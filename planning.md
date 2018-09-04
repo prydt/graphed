@@ -4,6 +4,6 @@
 
 - loading
 - login
-- main view
+- home view
 - class view
 - GPA view

@@ -1,6 +1,6 @@
-<template>
-  <div class="home">
-  </div>
+<template lang="pug">
+  .home
+    h1 Pug Works!
 </template>
 
 <script>
