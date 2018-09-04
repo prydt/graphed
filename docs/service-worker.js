@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.da3f6e3b31da4640a78e8c674c763079.js"
+  "precache-manifest.dd87435e6bf9731abe86d9554d1cd271.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "graphed"});

@@ -7,8 +7,8 @@ module.exports = {
     msTileColor: '#13293D'
   },
 
-  baseUrl: undefined,
-  assetsDir: undefined,
+  baseUrl: './',
+  assetsDir: './',
   runtimeCompiler: undefined,
   productionSourceMap: false,
   parallel: undefined,
