@@ -2,6 +2,7 @@
 
 ## Pages
 
+- loading
 - login
 - main view
 - class view

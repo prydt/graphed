@@ -11,7 +11,7 @@ def getDataWithLogin(username, password):
     s = requests.Session()
 
     # log in
-    res = s.post(URL + '/Account/LogOn', data = {
+    s.post(URL + '/Account/LogOn', data = {
         'Database': '10',
         'LogOnDetails.UserName': username,
         'LogOnDetails.Password': password
@@ -24,16 +24,21 @@ def getDataWithToken(session_id, auth_cookie):
 
 def getData(session, session_id=None, auth_cookie=None):
 
-    data = { 'classes': [] }
+    data = { 'classes': [], 'session_id': '', 'auth_cookie': '' }
 
     # get grades page
     if session_id is None or auth_cookie is None:
         res = session.get(URL + '/Content/Student/Assignments.aspx')
+
     else:
         res = session.get(URL + '/Content/Student/Assignments.aspx', cookies={
             '.AuthCookie': auth_cookie,
             'ASP.NET_SessionId': session_id
         })
+
+    # for auth cookies
+    data['session_id'] = session.cookies['.AuthCookie']
+    data['auth_cookie'] = session.cookies['ASP.NET_SessionId']
 
     # for parsing html
     soup = BeautifulSoup(res.text, 'html.parser')
@@ -84,6 +89,6 @@ def getData(session, session_id=None, auth_cookie=None):
 
     return json.dumps(data)
 
-
+# only for testing purposes as this will never be used as a
 if __name__ == '__main__':
     getData(os.environ['HUSERNAME'], os.environ['HPASSWORD'])
