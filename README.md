@@ -1,3 +1,5 @@
+# THIS REPO HAS BEEN MOVED TO [graphed/graphed](https://github.com/graphed/graphed.github.io)
+
 # graphed
 
 > A Simple HAC Scraper and Frontend
